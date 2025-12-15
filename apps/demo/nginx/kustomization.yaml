@@ -1,0 +1,4 @@
+namespace: demo
+
+resources:
+- deployment.yaml
