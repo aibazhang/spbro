@@ -1,2 +1,8 @@
 apiService:
   insecureSkipTLSVerify: true
+args:
+  - --cert-dir=/tmp
+  - --secure-port=4443
+  - --v=2
+  - --kubelet-insecure-tls
+  - --kubelet-preferred-address-types=InternalIP
