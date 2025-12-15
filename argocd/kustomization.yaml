@@ -1,5 +1,6 @@
 namespace: argocd
 
 resources:
+  - app-metrics-server.yaml
   - appset-app.yaml
   - appproj-demo.yaml
