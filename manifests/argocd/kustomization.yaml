@@ -1,4 +1,4 @@
 namespace: argocd
 
 resources:
-  - app-hello.yaml
+  - app-nginx.yaml
