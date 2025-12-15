@@ -14,3 +14,11 @@ spec:
   - repoURL: 'https://github.com/aibazhang/spbro'
     targetRevision: master
     ref: values
+  destination:
+    namespace: metrics-server
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
