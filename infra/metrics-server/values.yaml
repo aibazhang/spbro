@@ -2,9 +2,6 @@ apiService:
   insecureSkipTLSVerify: true
 # https://github.com/kubernetes-sigs/metrics-server/issues/131#issuecomment-618671827
 args:
-  - --cert-dir=/tmp
-  - --secure-port=4443
-  - --v=2
   - --kubelet-insecure-tls
   - --kubelet-preferred-address-types=InternalIP
 
