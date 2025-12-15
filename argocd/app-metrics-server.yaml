@@ -15,11 +15,9 @@ spec:
     targetRevision: master
     ref: values
   destination:
-    namespace: metrics-server
+    namespace: kube-system
     server: 'https://kubernetes.default.svc'
   syncPolicy:
-    syncOptions:
-    - CreateNamespace=true
     automated:
       prune: true
       allowEmpty: true
