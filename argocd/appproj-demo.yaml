@@ -3,6 +3,8 @@ kind: AppProject
 metadata:
   name: demo
 spec:
+  sourceRepos:
+  - '*'
   destinations:
   - namespace: "demo"
     server: "*"
