@@ -12,6 +12,6 @@ livenessProbe:
     path: /livez
     port: https
     scheme: HTTPS
-  initialDelaySeconds: 10
+  initialDelaySeconds: 20
   periodSeconds: 10
   failureThreshold: 3
