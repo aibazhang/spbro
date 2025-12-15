@@ -4,5 +4,5 @@ metadata:
   name: demo
 spec:
   destinations:
-  - namespace: 'demo'
-    server: '*'
+  - namespace: "demo"
+    server: "*"
