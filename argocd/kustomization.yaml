@@ -1,5 +1,5 @@
 namespace: argocd
 
 resources:
-  - appset-app.yaml
+  - appset-demo.yaml
   - appproj-demo.yaml

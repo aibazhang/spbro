@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: appset-app
+  name: appset-demo
   namespace: argocd
 spec:
   goTemplate: true
@@ -11,19 +11,19 @@ spec:
       repoURL: https://github.com/aibazhang/spbro
       revision: master
       directories:
-      - path: apps/*/*
+      - path: apps/demo/*
   template:
     metadata:
-      name: "{{index .path.segments 1}}"
+      name: demo-"{{index .path.segments 0}}"
     spec:
-      project: "{{index .path.segments 0}}"
+      project: demo
       source:
         repoURL: https://github.com/aibazhang/spbro
         targetRevision: master
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: "{{index .path.segments 0}}"
+        namespace: demo
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
