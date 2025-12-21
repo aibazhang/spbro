@@ -3,5 +3,4 @@ server:
     storageClass: local-path 
 
 alertmanager:
-  persistentVolume:
-    storageClass: local-path
+  enabled: false
