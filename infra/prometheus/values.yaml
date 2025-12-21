@@ -1,0 +1,7 @@
+server:
+  persistentVolume:
+    storageClass: local-path 
+
+alertmanager:
+  persistentVolume:
+    storageClass: local-path
