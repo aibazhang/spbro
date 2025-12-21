@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/aibazhang/spbro
+    targetRevision: master
+    path: infra/local-path-provisioner
+  destination:
+    namespace: local-path-provisioner
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      allowEmpty: true
+      selfHeal: true
