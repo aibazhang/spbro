@@ -3,6 +3,5 @@ namespace: argocd
 resources:
   - app-metrics-server.yaml
   - app-prometheus.yaml
-  - app-local-path-provisioner.yaml
   - appset-app.yaml
   - appproj-demo.yaml
